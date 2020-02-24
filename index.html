@@ -1,63 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
-    <style>
-        .success,
-        .error {
-            color: white;
-            padding: 5px;
-            margin: 5px 0 15px 0;
-        }
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        .success {
-            background: green;
-        }
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-        .error {
-            background: red;
-        }
-    </style>
-    <title>Book List</title>
+    <title>Book list</title>
 </head>
 
 <body>
     <div class="container">
-        <h1>Add Book</h1>
-        <form id="book-form">
-            <div>
-                <label for="title">Title</label>
-                <input type="text" id="title" class="u-full-width">
+        <div class="row">
+            <div class="col">
+                <h3 class="text-center py-2">Book List</h3>
+                <form id="book-form">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input id="title" class="form-control" type="text" name="title">
+                    </div>
+                    <div class="form-group">
+                        <label for="author">Author</label>
+                        <input id="author" class="form-control" type="text" name="author">
+                    </div>
+                    <div class="form-group">
+                        <label for="isbn">ISBN</label>
+                        <input id="isbn" class="form-control" type="text" name="isbn">
+                    </div>
+                    <div class="form-group">
+                        <input class="btn btn-primary" type="submit">
+                    </div>
+                </form>
+                <div class="py-5">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Author</th>
+                                <th>ISBN</th>
+                            </tr>
+                        </thead>
+                        <tbody id="book-list"></tbody>
+                    </table>
+                </div>
             </div>
-            <div>
-                <label for="author">Author</label>
-                <input type="text" id="author" class="u-full-width">
-            </div>
-            <div>
-                <label for="isbn">ISBN#</label>
-                <input type="text" id="isbn" class="u-full-width">
-            </div>
-            <div>
-                <input type="submit" value="Submit" class="u-full-width">
-            </div>
-        </form>
-        <table class="u-full-width">
-            <thead>
-                <tr>
-                    <th>Title</th>
-                    <th>Author</th>
-                    <th>ISBN</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody id="book-list"></tbody>
-        </table>
+        </div>
     </div>
 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
     <script src="app.js"></script>
 </body>
 
